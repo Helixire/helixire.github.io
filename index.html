@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="./semantic/semantic.min.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="semantic/semantic.min.js"></script>
-  <style>body > .ui.container {
-      margin-top: 0em;
+  <style>.ui[class*="five column"].grid > .column:not(.row), .ui[class*="five column"].grid > .row > .column {
+    width: 20%;
+    padding: 0.7rem;
     }</style>
 </head>
 
@@ -261,19 +262,19 @@
         <div class="ui two column grid">
           <div class="column">
             <img class="ui tiny left floated image" src="./asset/owl.jpg" />
-            <div data-translate="POwl"></div>
+            <span data-translate="POwl"></span>
           </div>
           <div class="column">
             <img class="ui tiny left floated image" src="./asset/asimov.png" />
-            <div data-translate="PSci"></div>
+            <span data-translate="PSci"></span>
           </div>
           <div class="column">
             <img class="ui tiny left floated image" src="./asset/guitar.png" />
-            <div data-translate="PGuitar"></div>
+            <span data-translate="PGuitar"></span>
           </div>
           <div class="column">
             <img class="ui tiny left floated image" src="./asset/atom.jpg" />
-            <div data-translate="PScience"></div>
+            <span data-translate="PScience"></span>
           </div>
         </div>
       </div>
