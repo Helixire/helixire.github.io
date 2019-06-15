@@ -9,12 +9,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="semantic/semantic.min.js"></script>
   <style>body > .ui.container {
-      margin-top: 3em;
+      margin-top: 0em;
     }</style>
 </head>
 
 <body>
   <div class="ui container">
+    <div id="flag" class="ui right floated animated button" onclick="change_lang()">
+      <div class="visible content"><i class="gb flag"></i></div>
+      <div class="hidden content"><i class="fr flag"></i></div>
+    </div>
     <h1 class="ui center aligned header top margin">COMPUTER ENGINEER</h1>
 
     <div class="ui two column very relaxed stackable grid">
@@ -63,6 +67,13 @@
               linkedin.com/in/pierre-blank
             </a>
           </div>
+
+          <div class="item">
+            <i class="code icon"></i>
+            <a class="content" href="https://helixire.github.io/">
+              helixire.github.io
+            </a>
+          </div>
         </div>
 
       </div>
@@ -77,12 +88,12 @@
 
           <div class="two column row">
             <div class="column">
-              <div class="ui tiny header">
+              <div class="ui tiny header" data-translate="FDEpitech">
                 2014-currently
               </div>
               EPITECH
             </div>
-            <p class="column">
+            <p class="column" data-translate="FTEpitech">
               Currently in last year</br>
               Computing Engineer Diploma
             </p>
@@ -95,7 +106,7 @@
               </div>
               DCU
             </div>
-            <div class="column">
+            <div class="column" data-translate="FTDCU">
               Dublin City University Specialization in Security
             </div>
           </div>
@@ -107,7 +118,7 @@
               </div>
               Dexter Hight School (U.S.A)
             </div>
-            <div class="column">
+            <div class="column" data-translate="FTDexter">
               Foreign exchange student living in host family
             </div>
           </div>
@@ -118,28 +129,28 @@
         <h2 class="ui horizontal divider header">LANGUAGES</h2>
         <div class="ui two column grid">
           <div class="two column row">
-            <div class="ui tiny header column">
+            <div class="ui tiny header column" data-translate="French">
               FRENCH
             </div>
-            <div class="column">
+            <div class="column" data-translate="TFrench">
               Native language
             </div>
           </div>
 
           <div class="two column row">
-            <div class="ui tiny header column">
+            <div class="ui tiny header column" data-translate="English">
               English
             </div>
-            <div class="column">
+            <div class="column" data-translate="TEnglish">
               Bilingual
             </div>
           </div>
 
           <div class="two column row">
-            <div class="ui tiny header column">
+            <div class="ui tiny header column" data-translate="Russian">
               Russian
             </div>
-            <div class="column">
+            <div class="column" data-translate="TRussian">
               High school level
             </div>
           </div>
@@ -150,7 +161,7 @@
 
         <div class="ui two column grid">
           <div class="two column row">
-            <div class="ui tiny header column">
+            <div class="ui tiny header column" data-translate="EDLumi">
               April 2017 — march 2018
             </div>
             <div class="ui tiny header column">
@@ -159,7 +170,7 @@
           </div>
         </div>
         <ul class="ui list">
-          <li>
+          <li data-translate="ETLumi1">
             Algorithm creation and optimization
             In postgis SQL and python for
             optical fiber map creation
@@ -168,7 +179,7 @@
 
         <div class="ui two column grid">
           <div class="two column row">
-            <div class="ui tiny header column">
+            <div class="ui tiny header column" data-translate="EDAfri">
               Sept 2016 — march 2017
             </div>
             <div class="ui tiny header column">
@@ -177,17 +188,17 @@
           </div>
         </div>
         <ul class="ui list">
-          <li>
+          <li data-translate="ETAfri1">
             Website creation with Laravel and PrestaShop
           </li>
-          <li>
+          <li data-translate="ETAfri2">
             Service technician on multiple platforms (TagPay, Orange money, etc.)
           </li>
         </ul>
 
         <div class="ui two column grid">
           <div class="two column row">
-            <div class="ui tiny header column">
+            <div class="ui tiny header column" data-translate="EDEvent">
               July — December 2015
             </div>
             <div class="ui tiny header column">
@@ -196,10 +207,10 @@
           </div>
         </div>
         <ul class="ui list">
-          <li>
+          <li data-translate="ETEvent1">
             3D map visualization on Android with Map editing.
           </li>
-          <li>
+          <li data-translate="ETEvent2">
             Instantaneous vote by mobile application on Android and IOS through locally networked server
           </li>
         </ul>
@@ -212,7 +223,7 @@
             <div class="ui tiny header header">
               2018 - 2019
             </div>
-            <div class="description">
+            <div class="description" data-translate="N1">
               Shell-script injection, OpenCL parallel algorithm, CI/CD development for multiple platform and tech
             </div>
           </div>
@@ -221,7 +232,7 @@
             <div class="ui tiny header header">
               2017 - 2018
             </div>
-            <div class="description">
+            <div class="description" data-translate="N2">
               PostgiSQL, graph optimization and distribution of load via containerization
             </div>
           </div>
@@ -230,7 +241,7 @@
             <div class="ui tiny header header">
               2016 - 2017
             </div>
-            <div class="description">
+            <div class="description" data-translate="N3">
               IA conception for the game of Gomoku and multiple application on IOS and Android
             </div>
           </div>
@@ -239,7 +250,7 @@
             <div class="ui tiny header header">
               2015 - 2016
             </div>
-            <div class="description">
+            <div class="description" data-translate="N4">
               Creation of FTP client and server and game engine
             </div>
           </div>
@@ -248,7 +259,7 @@
             <div class="ui tiny header header">
               2014 - 2015
             </div>
-            <div class="description">
+            <div class="description" data-translate="N5">
               Shell creation and 3D Raytracer renderer
             </div>
           </div>
@@ -295,25 +306,33 @@
         </div>
       </div>
       <div class="sixteen wide column">
-        <h2 class="ui horizontal divider header">ASSOCIATIF ET PASSIONS</h2>
+        <h2 class="ui horizontal divider header">PASSIONS</h2>
         <div class="ui two column grid">
           <div class="column">
             <img class="ui tiny left floated image" src="./asset/owl.jpg" />
-            Membre of the Student Union EPITECH Paris.
-            Treasurer of the school association Straetegic.
-            Membre of YFU (Youth For Understanding).
+            <div data-translate="POwl">
+              Membre of the Student Union EPITECH Paris.
+              Treasurer of the school association Straetegic.
+              Membre of YFU (Youth For Understanding).
+            </div>
           </div>
           <div class="column">
             <img class="ui tiny left floated image" src="./asset/asimov.png" />
-            Science fiction lover. Isaac Asimov is my favorite author
+            <div data-translate="PSci">
+              Science fiction lover. Isaac Asimov is my favorite author
+            </div>
           </div>
           <div class="column">
             <img class="ui tiny left floated image" src="./asset/guitar.png" />
-            Played the guitar for more than 10 years
+            <div data-translate="PGuitar">
+              Played the guitar for more than 10 years
+            </div>
           </div>
           <div class="column">
             <img class="ui tiny left floated image" src="./asset/atom.jpg" />
-            Everything that relates to Science has always fascinated me.
+            <div data-translate="PScience">
+              Everything that relates to Science has always fascinated me.
+            </div>
           </div>
         </div>
       </div>
@@ -325,6 +344,140 @@
       if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
       else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
       else window.onload = autorun;
+
+      var dictionary = {
+        'FDEpitech': {
+          'en': '2014-currently',
+          'fr': '2014-aujourd\'hui',
+        },
+        'FTEpitech': {
+          'en': 'Currently in last year</br>Computing Engineer Diploma',
+          'fr': "Actuellement en dernière année</br>diplôme d'ingénieur informatique",
+        },
+        'FTDCU': {
+          'en': "Dublin City University Specialization in Security",
+          'fr': 'Dublin City University Specialization en cybersécurité',
+        },
+        'FTDexter': {
+          'en': "Foreign exchange student living in host family",
+          'fr': "Étudiant à l'étranger dans une famille d'accueil",
+        },
+        'French': {
+          'en': "French",
+          'fr': 'Français',
+        },
+        'TFrench': {
+          'en': "Native language",
+          'fr': 'Langue natale',
+        },
+        'English': {
+          'en': "English",
+          'fr': 'Anglais',
+        },
+        'TEnglish': {
+          'en': "Bilingual",
+          'fr': 'Bilingue',
+        },
+        'Russian': {
+          'en': "Russian",
+          'fr': 'Russe',
+        },
+        'TRussian': {
+          'en': "High school level",
+          'fr': 'Niveaux Lycée',
+        },
+        'EDLumi': {
+          'en': "April 2017 - march 2018",
+          'fr': 'Avril 2017 - mars 2018',
+        },
+        'ETLumi1': {
+          'en': "Algorithm creation and optimization In postgis SQL and python for optical fiber map creation",
+          'fr': "Création et optimisation d'algorithmes en PostgisSQL et python pour la création du plan de pose de réseaux de fibre optique",
+        },
+        'EDAfri': {
+          'en': "Sept 2016 — march 2017",
+          'fr': 'Sept 2016 - mars 2017',
+        },
+        'ETAfri1': {
+          'en': "Website creation with Laravel and PrestaShop",
+          'fr': 'Création de site Laravel et PrestaShop',
+        },
+        'ETAfri2': {
+          'en': "Service technician on multiple platforms (TagPay, Orange money, etc.)",
+          'fr': 'Service Technique sur de multiples platforms (TagPay, Orange money, etc.)',
+        },
+        'EDEvent': {
+          'en': "July — December 2015",
+          'fr': 'Juillet - Decembre 2015',
+        },
+        'ETEvent1': {
+          'en': "3D map visualization on Android with Map editing.",
+          'fr': "Création d'un outil de visualisation et de création de map sur Android et QT",
+        },
+        'ETEvent2': {
+          'en': "Instantaneous vote by mobile application on Android and IOS through locally networked server",
+          'fr': "Création d'applications Android et IOS, de serveur et de software pour le vote instantané par réseau local lors d'événements",
+        },
+        'N1': {
+          'en': "Shell-script injection, OpenCL parallel algorithm, CI/CD development for multiple platform and tech",
+          'fr': "Injection de Shell-script, algorithme de parallélisation de calcul via OpenCL, Création de CI/CD pour de multiples platforms (Android, software, site) et language",
+        },
+        'N2': {
+          'en': "PostgiSQL, graph optimization and load balancing via containerization",
+          'fr': 'PostgiSQL, optimisation de graph et distribution de calcul par containerization',
+        },
+        'N3': {
+          'en': "AI conception for the game of Gomoku and multiple application on IOS and Android",
+          'fr': "Création d'un Intelligence Artificiel pour le jeu de Gomoku et développement de multiples applications IOS et Android",
+        },
+        'N4': {
+          'en': "Creation of FTP client and server and game engine",
+          'fr': "Création d'un server et client FTP et d'un moteur de jeux",
+        },
+        'N5': {
+          'en': "Shell creation and 3D Raytracer renderer",
+          'fr': "Création d'un Shell et d'un moteur de rendu 3D utilisant le Raytracing",
+        },
+        'POwl': {
+          'en': "Membre of the Student Union EPITECH Paris</br>Membre of YFU (Youth For Understanding).",
+          'fr': "Membre du BDE Epitech Paris</br>Membre de YFU (Youth For Understanding)",
+        },
+        'PSci': {
+          'en': "Science fiction lover</br>Isaac Asimov is my favorite author",
+          'fr': "Amoureux de la Science Fiction</br>Isaac Asimov est mon auteur favori",
+        },
+        'PGuitar': {
+          'en': "Played the guitar for more than 10 years</br>Tommy Emmanuel is my goal",
+          'fr': 'Joue de la guitar depuis plus de 10 ans</br>Tommy Emmanuel est mon but',
+        },
+        'PScience': {
+          'en': "Everything that relates to Science has always fascinated me.",
+          'fr': "Tout ce qui touche à la Science m'a toujours fasciné",
+        },
+      };
+      var langs = ['en', 'fr'];
+      var current_lang = langs[0];
+      var lang_index = 0;
+
+      function translate() {
+        $("[data-translate]").each(function() {
+          var key = $(this).data('translate');
+          $(this).html(dictionary[key][current_lang] || "N/A");
+        });
+      }
+
+      function change_lang() {
+        ++lang_index;
+        lang_index %= 2;
+        current_lang = langs[lang_index];
+        translate();
+
+        $("#flag").html(lang_index == 0 ? '<div class=" visible content"><i class="gb flag"></i></div><div class="hidden content"><i class="fr flag"></i></div>' :
+          '<div class=" visible content"><i class="fr flag"></i></div><div class="hidden content"><i class="gb flag"></i></div>')
+        $("#flag").blur();
+      }
+
+      translate();
 
     </script>
 </body>
