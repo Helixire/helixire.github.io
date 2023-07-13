@@ -8,10 +8,13 @@
   <link rel="stylesheet" href="./semantic/semantic.min.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="semantic/semantic.min.js"></script>
-  <style>.ui[class*="five column"].grid > .column:not(.row), .ui[class*="five column"].grid > .row > .column {
-    width: 20%;
-    padding: 0.3rem;
-    }</style>
+  <style>
+    .ui[class*="five column"].grid>.column:not(.row),
+    .ui[class*="five column"].grid>.row>.column {
+      width: 20%;
+      padding: 0.3rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -35,7 +38,7 @@
           <div class="item">
             <i class="map marker alternate icon"></i>
             <div class="content">
-              118 Avenue de Wagram, 75017 Paris
+              92240, Malakoff
             </div>
           </div>
 
@@ -89,7 +92,9 @@
 
           <div class="two column row">
             <div class="column">
-              <div class="ui tiny header" data-translate="FDEpitech"></div>
+              <div class="ui tiny header">
+                2014 - 2021
+              </div>
               EPITECH
             </div>
             <p class="column" data-translate="FTEpitech"></p>
@@ -98,7 +103,7 @@
           <div class="two column row">
             <div class="column">
               <div class="ui tiny header">
-                2018-2019
+                2018 - 2019
               </div>
               DCU
             </div>
@@ -108,7 +113,7 @@
           <div class="two column row">
             <div class="column">
               <div class="ui tiny header">
-                2012-2013
+                2012 - 2013
               </div>
               Dexter Hight School (U.S.A)
             </div>
@@ -138,6 +143,20 @@
       </div>
       <div class="column">
         <h2 class="ui horizontal divider header">EXPERIENCES</h2>
+
+        <div class="ui two column grid">
+          <div class="two column row">
+            <div class="ui tiny header column" data-translate="EDNanoxplore"></div>
+            <div class="ui tiny header column">
+              NanoXplore
+            </div>
+          </div>
+        </div>
+        <ul class="ui list">
+          <li data-translate="ETNanoXplore"></li>
+          <!-- <li data-translate="ETNanoXplore2"></li>
+          <li data-translate="ETNanoXplore3"></li> -->
+        </ul>
 
         <div class="ui two column grid">
           <div class="two column row">
@@ -230,6 +249,25 @@
             <div class="description" data-translate="N5"></div>
           </div>
         </div>
+        <h2 class="ui horizontal divider header">PASSIONS</h2>
+        <div class="ui two column grid">
+          <div class="column">
+            <img class="ui tiny left floated image" src="./asset/owl.jpg" />
+            <span data-translate="POwl"></span>
+          </div>
+          <div class="column">
+            <img class="ui tiny left floated image" src="./asset/asimov.png" />
+            <span data-translate="PSci"></span>
+          </div>
+          <div class="column">
+            <img class="ui tiny left floated image" src="./asset/guitar.png" />
+            <span data-translate="PGuitar"></span>
+          </div>
+          <div class="column">
+            <img class="ui tiny left floated image" src="./asset/atom.jpg" />
+            <span data-translate="PScience"></span>
+          </div>
+        </div>
       </div>
       <div class="sixteen wide column">
         <h2 class="ui horizontal divider header">SKILLS</h2>
@@ -271,27 +309,6 @@
           <div class="column">REST</div>
         </div>
       </div>
-      <div class="sixteen wide column">
-        <h2 class="ui horizontal divider header">PASSIONS</h2>
-        <div class="ui two column grid">
-          <div class="column">
-            <img class="ui tiny left floated image" src="./asset/owl.jpg" />
-            <span data-translate="POwl"></span>
-          </div>
-          <div class="column">
-            <img class="ui tiny left floated image" src="./asset/asimov.png" />
-            <span data-translate="PSci"></span>
-          </div>
-          <div class="column">
-            <img class="ui tiny left floated image" src="./asset/guitar.png" />
-            <span data-translate="PGuitar"></span>
-          </div>
-          <div class="column">
-            <img class="ui tiny left floated image" src="./asset/atom.jpg" />
-            <span data-translate="PScience"></span>
-          </div>
-        </div>
-      </div>
     </div>
     <script type="text/javascript">
       function autorun() {
@@ -302,13 +319,9 @@
       else window.onload = autorun;
 
       var dictionary = {
-        'FDEpitech': {
-          'en': '2014-currently',
-          'fr': '2014-aujourd\'hui',
-        },
         'FTEpitech': {
-          'en': 'Currently in last year</br>Computing Engineer Diploma',
-          'fr': "Actuellement en dernière année</br>diplôme d'ingénieur informatique",
+          'en': 'Computing Engineer Master',
+          'fr': "Diplôme Master d'ingénieur informatique",
         },
         'FTDCU': {
           'en': "Dublin City University Specialization in Security",
@@ -342,19 +355,27 @@
           'en': "High school level",
           'fr': 'Niveaux Lycée',
         },
+        'EDNanoxplore': {
+          'en': 'February 2022 - Currently',
+          'fr': 'Fevrier 2022 - Actuellement',
+        },
+        'ETNanoXplore': {
+          'en': 'In Progress',
+          'fr': 'En Cours',
+        },
         'EDINFFLUX': {
-          'en': "Sept 2019 - Currently",
-          'fr': 'Sept 2019 - Actuellement',
+          'en': "Sept 2019 - February 2022",
+          'fr': 'Sept 2019 - Fevrier 2022',
         },
         'ETINFFLUX': {
           'en': "Maintainability and optimisation of C++/QT Client/Serveur for warehouse management",
           'fr': "Maintien et optimisation d'un client et serveur en C++/QT pour la gestion d'entrepôt",
         },
-        'ETINFFLUX2' : {
+        'ETINFFLUX2': {
           'en': "Creation of a REST API and FTP/SFTP automatic file transfert",
           'fr': "Création d'une API REST et système de transfert de fichier automatique en FTP/SFTP",
         },
-        'ETINFFLUX3' : {
+        'ETINFFLUX3': {
           'en': "Debuging crash and memory leak/hog from clients crash dump",
           'fr': "Debuging de crash et de memory leak/hog depuis une crash dump client",
         },
@@ -444,7 +465,7 @@
       var lang_index = 0;
 
       function translate() {
-        $("[data-translate]").each(function() {
+        $("[data-translate]").each(function () {
           var key = $(this).data('translate');
           $(this).html(dictionary[key][current_lang] || "N/A");
         });
@@ -461,7 +482,7 @@
 
       function getUrlVars() {
         var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
           vars[key] = value;
         });
         return vars;
